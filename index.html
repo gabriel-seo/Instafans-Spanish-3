@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InstafFans - Espacio seguro para creadores | Alternativa</title>
+    <meta name="description" content="Plataforma global para creadores. Gana más y disfruta libertad">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                    },
+                    backgroundImage: {
+                        'gradient-purple': 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+                        'gradient-sign-up': 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)',
+                        'hero-gradient': 'linear-gradient(180deg, #f8fafc 0%, #e2e8f0 100%)',
+                    },
+                    colors: {
+                        'instafans-purple': '#764ba2',
+                        'instafans-pink': '#f093fb',
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-text {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .gradient-text-signup {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .hero-section {
+            background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+        }
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .pulse-animation {
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+    </style>
+</head>
+<body class="bg-white overflow-x-hidden">
+    <!-- Header -->
+    <header class="bg-white/90 backdrop-blur-md fixed w-full top-0 z-50 border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <img class="h-10 w-auto" src="/images/instafans-logo.webp" alt="InstafFans Logo">
+                    </div>
+                </div>
+                <nav class="hidden md:block">
+                    <div class="flex items-center space-x-8">
+                        <a href="#descubrir" class="text-gray-700 hover:text-instafans-purple transition-colors duration-200">Descubrir</a>
+                        <a href="#ganar" class="text-gray-700 hover:text-instafans-purple transition-colors duration-200">Ganar</a>
+                        <a href="#libertad" class="text-gray-700 hover:text-instafans-purple transition-colors duration-200">Libertad</a>
+                        <a href="#registrarse" class="bg-gradient-to-r from-instafans-pink to-red-400 text-white px-6 py-2 rounded-full hover:shadow-lg transition-all duration-200 transform hover:scale-105">
+                            Registrarse
+                        </a>
+                    </div>
+                </nav>
+                <div class="md:hidden">
+                    <button class="text-gray-700 hover:text-instafans-purple">
+                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section pt-20 pb-16 lg:pt-28 lg:pb-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <!-- H1 -->
+                <h1 class="text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-black leading-tight tracking-tight mb-8">
+                    La plataforma global de 
+                    <span class="font-extrabold leading-normal tracking-[-0.9px] gradient-text lg:text-[99px] lg:leading-[75px] lg:tracking-[-2px] lg:gradient-text-signup">
+                        creadores
+                        <span class="lg:hidden gradient-text">plataforma</span>
+                    </span>
+                </h1>
+                
+                <!-- P -->
+                <p class="text-xl md:text-2xl lg:text-3xl text-gray-700 max-w-4xl mx-auto mb-12 leading-relaxed">
+                    Únete a <strong>InstafFans</strong>, una plataforma global para creadores. 
+                    Hazte visible, gana más y disfruta de libertad creativa total.
+                </p>
+
+                <!-- CTA Button -->
+                <div class="space-y-4 sm:space-y-0 sm:space-x-4 sm:flex sm:justify-center">
+                    <a href="#registrarse" class="inline-flex items-center justify-center px-8 py-4 border border-transparent text-lg font-semibold rounded-full text-white bg-gradient-to-r from-instafans-pink to-red-400 hover:from-pink-600 hover:to-red-500 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl pulse-animation">
+                        Comenzar ahora
+                        <svg class="ml-2 h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                        </svg>
+                    </a>
+                    <a href="#como-funciona" class="inline-flex items-center justify-center px-8 py-4 border-2 border-gray-300 text-lg font-semibold rounded-full text-gray-700 bg-white hover:bg-gray-50 hover:border-instafans-purple transition-all duration-200">
+                        Ver cómo funciona
+                    </a>
+                </div>
+            </div>
+
+            <!-- Hero Visual Elements -->
+            <div class="mt-16 relative">
+                <div class="absolute inset-0 bg-gradient-to-r from-purple-400/20 to-pink-400/20 rounded-3xl blur-3xl"></div>
+                <div class="relative bg-white/50 backdrop-blur-sm rounded-3xl p-8 border border-gray-200">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div class="text-center">
+                            <div class="w-16 h-16 mx-auto bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mb-4">
+                                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="font-semibold text-gray-900">Visibilidad</h3>
+                            <p class="text-gray-600 mt-2">Haz que te descubran</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="w-16 h-16 mx-auto bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mb-4">
+                                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"></path>
+                                </svg>
+                            </div>
+                            <h3 class="font-semibold text-gray-900">Ingresos</h3>
+                            <p class="text-gray-600 mt-2">Monetiza tu contenido</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="w-16 h-16 mx-auto bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center mb-4">
+                                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path>
+                                </svg>
+                            </div>
+                            <h3 class="font-semibold text-gray-900">Libertad</h3>
+                            <p class="text-gray-600 mt-2">Expresión total</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Discovery Section -->
+    <section id="descubrir" class="py-16 lg:py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:grid lg:grid-cols-2 lg:gap-16 items-center">
+                <div class="order-2 lg:order-1">
+                    <!-- H2 -->
+                    <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+                        Página de descubrimiento.<br>
+                        <span class="gradient-text-signup">Hazte notar, cobra más</span>
+                    </h2>
+                    
+                    <!-- P -->
+                    <p class="text-xl text-gray-700 mb-8 leading-relaxed">
+                        Nuestra página de descubrimiento pone tu contenido frente a una audiencia más amplia, ayudándote a ganar visibilidad y atraer más seguidores.
+                    </p>
+
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">
+                                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                            </div>
+                            <span class="text-gray-700">Algoritmo inteligente de descubrimiento</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">
+                                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                            </div>
+                            <span class="text-gray-700">Promoción personalizada de contenido</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">
+                                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                            </div>
+                            <span class="text-gray-700">Audiencia global activa</span>
+                        </div>
+                    </div>
+
+                    <div class="mt-8">
+                        <a href="#registrarse" class="inline-flex items-center justify-center px-8 py-4 border border-transparent text-lg font-semibold rounded-full text-white bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 transform hover:scale-105 transition-all duration-200 shadow-lg">
+                            ¡Aumenta tu visibilidad ahora!
+                        </a>
+                    </div>
+                </div>
+
+                <div class="order-1 lg:order-2 mb-12 lg:mb-0">
+                    <div class="relative">
+                        <div class="bg-gradient-to-br from-purple-400 to-pink-400 rounded-3xl p-8 transform rotate-3 hover:rotate-0 transition-transform duration-300">
+                            <div class="bg-white rounded-2xl p-6 shadow-xl">
+                                <div class="text-center">
+                                    <div class="w-20 h-20 mx-auto bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mb-4">
+                                        <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                                        </svg>
+                                    </div>
+                                    <h3 class="font-bold text-xl text-gray-900 mb-2">Descubrimiento</h3>
+                                    <p class="text-gray-600">Tu contenido, visto por miles</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="absolute -bottom-4 -right-4 bg-yellow-400 rounded-full p-3 shadow-lg animate-bounce">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Earning Potential Section -->
+    <section id="ganar" class="py-16 lg:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:grid lg:grid-cols-2 lg:gap-16 items-center">
+                <div>
+                    <div class="relative">
+                        <div class="bg-gradient-to-br from-green-400 to-emerald-500 rounded-3xl p-8 transform -rotate-3 hover:rotate-0 transition-transform duration-300">
+                            <div class="bg-white rounded-2xl p-6 shadow-xl">
+                                <div class="text-center">
+                                    <div class="w-20 h-20 mx-auto bg-gradient-to-r from-green-500 to-emerald-600 rounded-full flex items-center justify-center mb-4">
+                                        <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"></path>
+                                        </svg>
+                                    </div>
+                                    <h3 class="font-bold text-xl text-gray-900 mb-2">Ganancias</h3>
+                                    <p class="text-gray-600">Monetización sin límites</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="absolute -top-4 -left-4 bg-green-400 rounded-full p-3 shadow-lg animate-pulse">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"></path>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+                        Libera tu 
+                        <span class="gradient-text-signup">potencial de ganancias</span>
+                    </h2>
+                    
+                    <p class="text-xl text-gray-700 mb-8 leading-relaxed">
+                        En InstafFans, empoderamos a los creadores para crecer, interactuar y monetizar su contenido en un entorno de apoyo.
+                    </p>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+                        <div class="bg-gray-50 rounded-lg p-4 card-hover">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center">
+                                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900">Pagos directos</h4>
+                                    <p class="text-sm text-gray-600">A tu tarjeta Visa</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-gray-50 rounded-lg p-4 card-hover">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-10 h-10 bg-purple-500 rounded-full flex items-center justify-center">
+                                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900">Pagos instantáneos</h4>
+                                    <p class="text-sm text-gray-600">Cripto seguro</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-gray-50 rounded-lg p-4 card-hover">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center">
+                                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900">Transacciones discretas</h4>
+                                    <p class="text-sm text-gray-600">Privacidad total</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-gray-50 rounded-lg p-4 card-hover">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-10 h-10 bg-red-500 rounded-full flex items-center justify-center">
+                                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900">Alcance global</h4>
+                                    <p class="text-sm text-gray-600">Opciones SWIFT</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-8">
+                        <a href="#registrarse" class="inline-flex items-center justify-center px-8 py-4 border border-transparent text-lg font-semibold rounded-full text-white bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 transform hover:scale-105 transition-all duration-200 shadow-lg">
+                            ¡Comienza a ganar ahora!
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Creative Freedom Section -->
+    <section id="libertad" class="py-16 lg:py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+                    <span class="gradient-text">Libertad creativa</span> total
+                </h2>
+                <p class="text-xl text-gray-700 max-w-3xl mx-auto">
+                    Expresa tu creatividad sin restricciones en una plataforma que valora y protege tu contenido auténtico.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-xl p-8 shadow-lg card-hover">
+                    <div class="w-12 h-12 bg-gradient-to-r from-blue-500
